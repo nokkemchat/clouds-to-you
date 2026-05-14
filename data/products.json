@@ -1,0 +1,107 @@
+[
+  {
+    "id": "prod_1778555765158_ohzlwaj",
+    "name": "Nasty Dragon",
+    "tagline": "Never A Nasty Flavor ",
+    "description": "smoooth smoke ",
+    "price": 10,
+    "imageUrl": "/uploads/1778555765133_v.webp",
+    "group": "Disposable ",
+    "features": [
+      "Ceramic Core"
+    ],
+    "flavors": [
+      "Blue Rozz Ice"
+    ]
+  },
+  {
+    "id": "prod_1778556099300_8g1ibel",
+    "name": "Natsy Dragon ",
+    "tagline": "Venom ",
+    "description": "Never A Nasty Flavour \r\n",
+    "price": 10,
+    "imageUrl": "/uploads/1778556099279_B.webp",
+    "group": "Disposable ",
+    "features": [
+      "Ceramic Core"
+    ],
+    "flavors": [
+      "Peach Ice"
+    ]
+  },
+  {
+    "id": "prod_1778556345680_f05h5e7",
+    "name": "Nasty Dragon",
+    "tagline": "Titar ",
+    "description": "Never A Nasty Flavor ",
+    "price": 10,
+    "imageUrl": "/uploads/1778556345533_K.webp",
+    "group": "Disposable ",
+    "features": [
+      "Ceramic Core"
+    ],
+    "flavors": [
+      "JJ Cale"
+    ]
+  },
+  {
+    "id": "prod_1778652363345_7ewq3tc",
+    "name": "Nasty Energy Drink ",
+    "tagline": "Never A Nasty Flavor ",
+    "description": "Boost your energy \r\n",
+    "price": 4,
+    "imageUrl": "/uploads/1778652363328_35.webp",
+    "group": "Energy Drinks ",
+    "features": [
+      "Neon"
+    ],
+    "flavors": [
+      "Kiwi"
+    ]
+  },
+  {
+    "id": "prod_1778652441465_cr8cat2",
+    "name": "Nasty Energy Drink ",
+    "tagline": "Never A Nasty Flavor ",
+    "description": "Energy ",
+    "price": 4,
+    "imageUrl": "/uploads/1778652441455_33.webp",
+    "group": "Energy Drinks ",
+    "features": [
+      "Neon"
+    ],
+    "flavors": [
+      "Blue Berry"
+    ]
+  },
+  {
+    "id": "prod_1778652917634_8z3ocnj",
+    "name": "Tobacco Vanilla Perfume for Men ",
+    "tagline": "Zara",
+    "description": "good",
+    "price": 120,
+    "imageUrl": "/uploads/1778652917604_cc.webp",
+    "group": "Perfume ",
+    "features": [
+      "Ceramic Core"
+    ],
+    "flavors": [
+      "Honey & Citrus"
+    ]
+  },
+  {
+    "id": "prod_1778653101419_mlhgukb",
+    "name": "Black Tobacco",
+    "tagline": "Zara",
+    "description": "Black Tobacco is a deep and strong fragrance that makes a statement without saying a word. Its tobacco status is mixed with warm and woody overtones to form a dark and smoky fragrance, which is confident, masculine, and memorable. It is a fragrance that makes a memorable impression, an authoritative one, on anyone who walks past at night, in power meetings, or on any occasion that counts.",
+    "price": 200,
+    "imageUrl": "/uploads/1778653101395_vv.webp",
+    "group": "Perfume ",
+    "features": [
+      "Neon"
+    ],
+    "flavors": [
+      "Black Tobacco"
+    ]
+  }
+]

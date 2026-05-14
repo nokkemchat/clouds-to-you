@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #FF6A00;
+  --color-brand-secondary: #FFB347;
+  --color-brand-cyan: #00D6FF;
+  --color-background-primary: #050505;
+  --color-background-secondary: #0A0A0C;
+  --font-sans: "Inter", "SF Pro Display", "SF Pro Text", sans-serif;
+  --animate-vapor-drift: vapor-drift 8s infinite alternate ease-in-out;
+  --animate-vapor-drift-reverse: vapor-drift-reverse 10s infinite alternate ease-in-out;
+  --animate-vapor-float: vapor-float 6s infinite alternate ease-in-out;
+  --animate-float-up-fade: float-up-fade 4s forwards linear;
+}
+
+@keyframes vapor-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(1.1); }
+  100% { transform: translate(-10px, -40px) scale(0.9); }
+}
+
+@keyframes vapor-drift-reverse {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, -10px) scale(0.8); }
+  100% { transform: translate(20px, -30px) scale(1.2); }
+}
+
+@keyframes vapor-float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(0, -50px) scale(1.1); }
+}
+
+@keyframes float-up-fade {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(-150px); opacity: 0; }
+}
+
+:root {
+  --background: #050505;
+  --foreground: rgba(255, 255, 255, 0.92);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base headings */
+h1, h2, h3, h4, h5, h6 {
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.60);
+}
+
+@utility glass-ios {
+  background: rgba(15, 15, 20, 0.45);
+  backdrop-filter: blur(60px) saturate(250%) contrast(110%);
+  border: 0.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 20px rgba(0, 0, 0, 0.2),
+    0 30px 60px -15px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+@utility glass-card {
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+@utility glass-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03), transparent);
+  pointer-events: none;
+  border-radius: inherit;
+}

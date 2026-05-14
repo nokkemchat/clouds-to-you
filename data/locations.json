@@ -1,0 +1,22 @@
+[
+  {
+    "id": "harare-central",
+    "name": "Clouds To You - Harare Central",
+    "address": "Samora Machel Ave, Harare",
+    "lat": -17.8252,
+    "lng": 31.0335,
+    "phone": "+263 77 123 4567",
+    "hours": "8AM - 8PM",
+    "city": "Harare"
+  },
+  {
+    "id": "bulawayo-hub",
+    "name": "Clouds To You - Bulawayo Hub",
+    "address": "Jason Moyo St, Bulawayo",
+    "lat": -20.1455,
+    "lng": 28.5833,
+    "phone": "+263 77 987 6543",
+    "hours": "9AM - 7PM",
+    "city": "Bulawayo"
+  }
+]
