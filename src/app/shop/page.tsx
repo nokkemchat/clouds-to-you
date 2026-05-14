@@ -25,23 +25,23 @@ export default async function ShopPage() {
           src="/222.jpg" 
           alt="" 
           fill
-          className="object-cover opacity-20 blur-[100px] scale-150"
+          className="object-cover opacity-30 blur-[120px] scale-150"
           priority
         />
         
-        {/* Layer 2: The Main Graphic (Fully visible, no cropping) */}
+        {/* Layer 2: The Main Graphic (Top-aligned, fully visible) */}
         <Image 
           src="/222.jpg" 
           alt="Background" 
           fill
-          className="object-contain opacity-60 grayscale-[10%] brightness-[0.9] z-10"
+          className="object-contain opacity-70 grayscale-[5%] brightness-[0.95] z-10 object-top mt-20"
           quality={100}
           priority
         />
 
         {/* Layer 3: Contrast/Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background-primary/90 via-transparent to-background-primary z-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,5,5,0.4)_100%)] z-20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background-primary/60 via-transparent to-background-primary z-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,transparent_0%,rgba(5,5,5,0.6)_100%)] z-20" />
       </div>
 
       
