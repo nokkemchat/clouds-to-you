@@ -24,8 +24,8 @@ export default async function ShopPage() {
           src="/222.jpg" 
           alt="Background" 
           fill
-          className="w-full h-full object-cover opacity-45 grayscale-[20%] brightness-[0.8] scale-100 object-center"
-          quality={50}
+          className="w-full h-full object-contain opacity-45 grayscale-[20%] brightness-[0.8] object-center"
+          quality={80}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background-primary/90 via-background-primary/40 to-background-primary" />
       </div>
