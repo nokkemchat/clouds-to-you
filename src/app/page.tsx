@@ -51,7 +51,12 @@ export default function Home() {
             
             {/* Hero Section */}
             <motion.div 
-              style={{ opacity: heroOpacity, y: heroY }}
+              style={{ 
+                opacity: heroOpacity, 
+                y: heroY,
+                pointerEvents: useTransform(heroOpacity, v => v > 0.5 ? "auto" : "none") as any,
+                zIndex: useTransform(heroOpacity, v => v > 0.5 ? 50 : 0) as any
+              }}
               className="absolute inset-0 flex flex-col items-center justify-center text-center pb-[20vh]"
             >
               <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-white/90 to-brand-cyan/20 drop-shadow-2xl">
@@ -82,7 +87,11 @@ export default function Home() {
 
             {/* Engineering Reveal Section */}
             <motion.div 
-              style={{ opacity: engOpacity, y: engY }}
+              style={{ 
+                opacity: engOpacity, 
+                y: engY,
+                pointerEvents: useTransform(engOpacity, v => v > 0.5 ? "auto" : "none") as any
+              }}
               className="absolute left-8 right-8 lg:left-16 lg:right-auto lg:max-w-md flex flex-col items-center lg:items-start text-center lg:text-left"
             >
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
@@ -103,7 +112,11 @@ export default function Home() {
 
             {/* Vapor Technology Section */}
             <motion.div 
-              style={{ opacity: techOpacity, y: techY }}
+              style={{ 
+                opacity: techOpacity, 
+                y: techY,
+                pointerEvents: useTransform(techOpacity, v => v > 0.5 ? "auto" : "none") as any
+              }}
               className="absolute right-8 left-8 lg:left-auto lg:right-16 lg:max-w-md flex flex-col items-center lg:items-end text-center lg:text-right"
             >
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
@@ -127,7 +140,11 @@ export default function Home() {
 
             {/* Flavor Experience Section */}
             <motion.div 
-              style={{ opacity: flavorOpacity, scale: flavorScale }}
+              style={{ 
+                opacity: flavorOpacity, 
+                scale: flavorScale,
+                pointerEvents: useTransform(flavorOpacity, v => v > 0.5 ? "auto" : "none") as any
+              }}
               className="absolute inset-0 flex flex-col items-center justify-end text-center pb-24"
             >
               <div className="relative max-w-2xl glass-ios p-12 rounded-[50px] border border-brand-primary/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] overflow-hidden">
@@ -146,7 +163,11 @@ export default function Home() {
 
             {/* Reassembly + CTA Section */}
             <motion.div 
-              style={{ opacity: finalOpacity, y: finalY }}
+              style={{ 
+                opacity: finalOpacity, 
+                y: finalY,
+                pointerEvents: useTransform(finalOpacity, v => v > 0.5 ? "auto" : "none") as any
+              }}
               className="absolute inset-0 flex flex-col items-center justify-end text-center pb-[15vh]"
             >
               <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
