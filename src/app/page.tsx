@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import CanvasScrollSequence from "@/components/CanvasScrollSequence";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Navigation2, CheckCircle2, ArrowRight, Map as MapIcon } from "lucide-react";
 
 export default function Home() {
@@ -177,10 +178,12 @@ export default function Home() {
         <section className="relative max-w-7xl mx-auto px-8 lg:px-16 py-32 border-t border-white/5 overflow-hidden rounded-[60px] my-20">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="/kk.webp" 
               alt="Locations Background" 
-              className="w-full h-full object-cover opacity-30 scale-110 blur-[2px]"
+              fill
+              className="object-cover opacity-30 scale-110 blur-[2px]"
+              quality={60}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background-primary via-background-primary/80 to-transparent" />
           </div>
@@ -232,7 +235,13 @@ export default function Home() {
             <Link href="/locations" className="relative aspect-square lg:aspect-video rounded-[50px] overflow-hidden glass-ios border border-white/20 shadow-2xl group cursor-pointer">
               <div className="glass-reflection" />
               <div className="absolute inset-0 bg-[#0a0a0c]">
-                <div className="absolute inset-0 opacity-40 bg-[url('/222.jpg')] bg-cover bg-center grayscale blur-sm scale-110 group-hover:scale-100 transition-transform duration-1000" />
+                <Image 
+                  src="/222.jpg" 
+                  alt="Store Radar" 
+                  fill
+                  className="object-cover opacity-40 grayscale blur-sm scale-110 group-hover:scale-100 transition-transform duration-1000"
+                  quality={50}
+                />
                 <div className="absolute inset-0 bg-gradient-to-tr from-background-primary via-background-primary/40 to-transparent" />
                 
                 <div className="absolute inset-0 flex items-center justify-center">

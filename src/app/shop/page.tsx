@@ -1,6 +1,7 @@
 import { getProducts } from "@/app/actions/productActions";
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
+import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 
@@ -19,10 +20,12 @@ export default async function ShopPage() {
     <div className="min-h-screen bg-background-primary flex flex-col relative">
       {/* Background Image with Overlay */}
       <div className="fixed inset-0 z-0">
-        <img 
+        <Image 
           src="/222.jpg" 
           alt="Background" 
+          fill
           className="w-full h-full object-cover opacity-45 grayscale-[20%] brightness-[0.8]"
+          quality={50}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background-primary/90 via-background-primary/40 to-background-primary" />
       </div>

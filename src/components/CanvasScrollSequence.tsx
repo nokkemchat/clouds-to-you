@@ -14,17 +14,23 @@ export default function CanvasScrollSequence({ progress }: CanvasScrollSequenceP
   const lastDrawnFrame = useRef<number>(-1);
 
   useEffect(() => {
+    // Detect mobile to reduce asset load
+    const isMobile = window.innerWidth < 768;
+    const effectiveFrameCount = isMobile ? Math.floor(frameCount / 2) : frameCount;
+    const step = isMobile ? 2 : 1;
+
     // Preload images
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
 
-    for (let i = 1; i <= frameCount; i++) {
+    for (let i = 1; i <= frameCount; i += step) {
       const img = new Image();
       const frameNum = i.toString().padStart(3, "0");
       img.src = `/frames/ezgif-frame-${frameNum}.jpg`;
       img.onload = () => {
         loadedCount++;
-        if (loadedCount === frameCount) {
+        // We only wait for the subset of frames on mobile
+        if (loadedCount === (isMobile ? Math.ceil(frameCount / 2) : frameCount)) {
           setImages(loadedImages);
           handleResize();
           drawFrame(1, loadedImages);
@@ -102,10 +108,12 @@ export default function CanvasScrollSequence({ progress }: CanvasScrollSequenceP
   };
 
   useMotionValueEvent(progress, "change", (latest) => {
-    if (images.length === frameCount) {
+    if (images.length > 0) {
+      const isMobile = window.innerWidth < 768;
+      const effectiveFrameCount = images.length;
       const frameIndex = Math.min(
-        frameCount,
-        Math.max(1, Math.ceil(latest * frameCount))
+        effectiveFrameCount,
+        Math.max(1, Math.ceil(latest * effectiveFrameCount))
       );
       
       if (frameIndex !== lastDrawnFrame.current) {
