@@ -18,16 +18,30 @@ export default async function ShopPage() {
 
   return (
     <div className="min-h-screen bg-background-primary flex flex-col relative">
-      {/* Background Image with Overlay */}
-      <div className="fixed inset-0 z-0">
+      {/* Dual-Layer Cinematic Background */}
+      <div className="fixed inset-0 z-0 bg-[#050505]">
+        {/* Layer 1: Blurred Ambient Fill (Fills all space) */}
+        <Image 
+          src="/222.jpg" 
+          alt="" 
+          fill
+          className="object-cover opacity-20 blur-[100px] scale-150"
+          priority
+        />
+        
+        {/* Layer 2: The Main Graphic (Fully visible, no cropping) */}
         <Image 
           src="/222.jpg" 
           alt="Background" 
           fill
-          className="w-full h-full object-contain opacity-45 grayscale-[20%] brightness-[0.8] object-center"
-          quality={80}
+          className="object-contain opacity-60 grayscale-[10%] brightness-[0.9] z-10"
+          quality={100}
+          priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background-primary/90 via-background-primary/40 to-background-primary" />
+
+        {/* Layer 3: Contrast/Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background-primary/90 via-transparent to-background-primary z-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,5,5,0.4)_100%)] z-20" />
       </div>
 
       
